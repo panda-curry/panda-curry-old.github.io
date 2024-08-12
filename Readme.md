@@ -1,121 +1,47 @@
-⚠️⚠️ This project is not maintained anymore ⚠️⚠️
+<p align="center"><img src="https://www.11ty.dev/img/logo-github.svg" width="200" height="200" alt="eleventy Logo"></p>
 
-## Will Jekyll Template - [Demo](https://willianjusten.github.io/will-jekyll-template)
+# eleventy 🕚⚡️🎈🐀
 
-![Screenshot](screenshot.png)
+A simpler static site generator. An alternative to Jekyll. Written in JavaScript. Transforms a directory of templates (of varying types) into HTML.
 
-This is a simple and minimalist template for Jekyll designed for developers that want to write blog posts but don't want to care about frontend stuff.
+Works with HTML, Markdown, JavaScript, Liquid, Nunjucks, with addons for WebC, Sass, Vue, Svelte, TypeScript, JSX, and many others!
 
-The Theme features:
+## ➡ [Documentation](https://www.11ty.dev/docs/)
 
-- Gulp
-- Stylus (Jeet, Rupture, Kouto Swiss)
-- Smoothscroll
-- Live Search
-- Offcanvas Menu
-- SVG icons
-- Very very small and fast!
-- Shell Script to create posts
-- Tags page
-- Series page
-- About Me page
-- Feed RSS
-- Sitemap.xml
-- Color Customization
-- Info Customization
+- Please star [this repo on GitHub](https://github.com/11ty/eleventy/)!
+- Follow us on Mastodon [@eleventy@fosstodon.org](https://fosstodon.org/@eleventy) or Twitter [@eleven_ty](https://twitter.com/eleven_ty)
+- Join us on [Discord](https://www.11ty.dev/blog/discord/)
+- Support [11ty on Open Collective](https://opencollective.com/11ty)
+- [11ty on npm](https://www.npmjs.com/org/11ty)
+- [11ty on GitHub](https://github.com/11ty)
 
-## Requirements
+[![npm Version](https://img.shields.io/npm/v/@11ty/eleventy.svg?style=for-the-badge)](https://www.npmjs.com/package/@11ty/eleventy) [![GitHub issues](https://img.shields.io/github/issues/11ty/eleventy.svg?style=for-the-badge)](https://github.com/11ty/eleventy/issues) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier) [![npm Downloads](https://img.shields.io/npm/dt/@11ty/eleventy.svg?style=for-the-badge)](https://www.npmjs.com/package/@11ty/eleventy)
 
-- This project only works until Node v11-
-
-## Basic Setup
-
-1. [Install Jekyll](http://jekyllrb.com)
-2. Fork the [Will Jekyll Template](https://github.com/willianjusten/will-jekyll-template/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
-5. Check out the sample posts in `_posts` to see examples for assigning categories and tags, and other YAML data.
-6. Edit [this line in the search component](https://github.com/willianjusten/will-jekyll-template/blob/gh-pages/src/js/simpleJekyllSearch.js#L4) to point to your own url.
-7. Read the documentation below for further customization pointers and documentation.
-8. **Remember to compile your assets files using Gulp!**
-
-## Site and User Settings
-
-You have to fill some informations on `_config.yml` to customize your site.
+## Installation
 
 ```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
-
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+npm install @11ty/eleventy --save-dev
 ```
 
-**Don't forget to change your baseurl before build your site!**
+Read our [Getting Started guide](https://www.11ty.dev/docs/getting-started/).
 
-## Color customization
-
-All color variables are in `src/styl/variable`. To change the main color, just set the new value at `main` assignment. Another colors are for texts and the code background color.
-
-## Creating posts
-
-You can use the `initpost.sh` to create your new posts. Just follow the command:
+## Tests
 
 ```
-./initpost.sh -c Post Title
+npm run test
 ```
 
-The new file will be created at `_posts` with this format `date-title.md`.
+- We use the [ava JavaScript test runner](https://github.com/avajs/ava) ([Assertions documentation](https://github.com/avajs/ava/blob/master/docs/03-assertions.md))
+- ℹ️ To keep tests fast, thou shalt try to avoid writing files in tests.
+- [Continuous Integration on GitHub Actions](https://github.com/11ty/eleventy/actions/workflows/ci.yml)
+- [Code Coverage Statistics](https://github.com/11ty/eleventy/blob/master/docs/coverage.md)
+- [Benchmark for Performance Regressions](https://github.com/11ty/eleventy-benchmark)
 
-## Front-matter
+## Community Roadmap
 
-When you create a new post, you need to fill the post information in the front-matter, follow this example:
+- [Top Feature Requests](https://github.com/11ty/eleventy/issues?q=label%3Aneeds-votes+sort%3Areactions-%2B1-desc+label%3Aenhancement) (Add your own votes using the 👍 reaction)
+- [Top Bugs 😱](https://github.com/11ty/eleventy/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions) (Add your own votes using the 👍 reaction)
 
-```
----
-layout: post
-title: "How to use"
-date: 2015-08-03 03:32:44
-image: '/assets/img/post-image.png'
-description: 'First steps to use this template'
-tags:
-- jekyll
-- template
-categories:
-- I love Jekyll
-twitter_text: 'How to install and use this template'
----
-```
+## Plugins
 
-## Running the blog in local
-
-In order to compile the assets and run Jekyll on local you need to follow those steps:
-
-- Install [NodeJS](https://nodejs.org/)
-- Run `npm install`
-- Run `gulp`
-
-## Questions
-
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@willian_justen](https://twitter.com/willian_justen) or file a [GitHub Issue](https://github.com/willianjusten/will-jekyll-template/issues/new).
-
-## Donation
-
-If you liked my work, buy me a coffee <3
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UTMFZUHX6EUGE)
-
-## License
-
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
-
-If you’d like to give me credit somewhere on your blog or tweet a shout out to [@willian_justen](https://twitter.com/willian_justen), that would be pretty sweet.
+See the [official docs on plugins](https://www.11ty.dev/docs/plugins/).
